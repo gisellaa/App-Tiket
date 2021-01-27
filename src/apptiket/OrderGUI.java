@@ -444,7 +444,15 @@ public class OrderGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKonfirmasiActionPerformed
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
-        this.dispose();
+        try {
+            int jawab;
+            if ((jawab = JOptionPane.showConfirmDialog(null, "Yakin ingin keluar?", "Konfirmasi",
+                    JOptionPane.YES_NO_OPTION)) == 0) {
+                this.dispose();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_btnKeluarActionPerformed
 
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
