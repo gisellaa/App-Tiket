@@ -66,7 +66,8 @@ public class TiketLogik {
         
     
     public double Pajak(){
-        return(0.1*subtotal);
+        pajak=0.1*subtotal;
+        return(pajak);
     }
     
     public double Total(){
